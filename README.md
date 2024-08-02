@@ -12,6 +12,9 @@
     * set() => __updates__ a signal
     * computed() => allows Angular to do change detection on computed value used with signals. 
     * To read signal value, signal needs to be called in template. E.g use __users().name__ instead of __users.name__
+* import `input` from core (__make sure it is LOWERCASE!__) - will be read-only!
+    * syntax if not value set `input.required('')` 
+    * Note that there is no changes in how the parent will pass data to the input 
 
 ### Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17
@@ -23,3 +26,6 @@
 ## Cheat Sheet
 * Preview Schematic: ng g c `<component>` __--dry-run__
 * `<app-header/>` Shorthand if not using content projection
+* Input typing: `@Input({required: true}) property__!__: string;` 
+    * Add "!" to tell TS that value will be set eventually
+    * Configure the Input decoractor to make sure that error is caught if we do forget to pass a value
