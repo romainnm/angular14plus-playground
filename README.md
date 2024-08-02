@@ -14,7 +14,10 @@
     * To read signal value, signal needs to be called in template. E.g use __users().name__ instead of __users.name__
 * import `input` from core (__make sure it is LOWERCASE!__) - will be read-only!
     * syntax if not value set `input.required('')` 
-    * Note that there is no changes in how the parent will pass data to the input 
+    * Note that there is no changes in how the parent will pass data to the input
+
+### Template Directive
+* *ngFor is deprecated, instead use @for block built-in syntax - Tracking is used by default now
 
 ### Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17
