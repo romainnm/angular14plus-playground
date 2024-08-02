@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserComponent } from "./user/user.component";
 import { MOCK_USERS } from '../mocks/users.mock';
@@ -12,6 +12,10 @@ import { MOCK_USERS } from '../mocks/users.mock';
 })
 export class AppComponent {
   users = MOCK_USERS;
+
+  onSelectUser(userId: string) {
+    console.log(`User id  is ${userId}`);
+  }
 }
 
 
