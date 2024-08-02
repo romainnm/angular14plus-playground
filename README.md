@@ -2,6 +2,7 @@
 * Decorator @Component has additional flags to enable standalone
 * Use @Component to import required Component, Modules, Directives, etc instead of NgModule
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17
+* Added extract of NgModule in app.component
 
 ### Vite PROs
 * Faster Development Build Times (60%+ build improvement)
