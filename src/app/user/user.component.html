@@ -1,1 +1,9 @@
-<p>user works!</p>
+<div>
+    <button (click)="onSelectUser()">
+        <img 
+            [src]="userAvatar()" 
+            [alt]="users().name"
+        />
+        <span>{{ users().name }}</span>
+    </button>
+</div>
