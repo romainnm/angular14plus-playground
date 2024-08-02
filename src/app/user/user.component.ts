@@ -48,7 +48,7 @@ export class UserComponent {
     @Input({ required: true }) avatar!: string;
     @Input({ required: true }) userName!: string;
     @Input({ required: true }) userId!: string;
-    @Output() select = new EventEmitter();
+    @Output() select = new EventEmitter<string>();
  
     get userAvatar() {
       return 'assets/users/' + this.avatar;
