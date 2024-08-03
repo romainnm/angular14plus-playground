@@ -14,6 +14,6 @@ export class UserInfoComponent {
 
 // ================================== ANGULAR 13- - START ==================================== // 
   // @Input() userInfo: string | undefined;
-  // @Input() userInfo?: string;
+  // Alt: @Input() userInfo?: string;
 // ================================== ANGULAR 13- - END ==================================== // 
 }
