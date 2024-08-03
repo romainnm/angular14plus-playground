@@ -18,8 +18,11 @@
 
 ## Syntax Changes
 * Alternative syntax (less verbose) for `@Output` (abstraction). Import `output` from core _(unlike `input`, it is not related to `signal`)_. E.g., `@Output() select = new EventEmitter();` becomes `select = output<string>();`. No change required in parent component either way.
-* `*ngFor` directive is deprecated; instead, use `@for {}` block built-in syntax - tracking is used by default now.
-* `*ngIf` directive is deprecated; instead, use `@if(condition) {display some HTML}` block built-in syntax - tracking is used by default now. Additionally, a `@else` can be added for a fallback display.
+* `*ngFor` structural directive is not default anymore, needs to be imported in component, `import { NgFor } ...` and add to `imports: [NgFor]`. 
+* `*ngFor` replaced with new syntax (Added in Angular 17) => `@for { some HTML }`
+* `*ngIf` structural directive is not default anymore, needs to be imported in component, `import { NgIf } ...` and add to `imports: [NgIf]`. 
+* `*ngIf` replaced with new syntax (Added in Angular 17) => `@if(condition) { some HTML}` tracking is used by default now. 
+* Additionally, an `@else` can be added as a fallback display, which allows to get rid of the `*ngIf=conditon; else fallback`,  `<ng-template #fallback>` pattern.
 
 ## Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17.
