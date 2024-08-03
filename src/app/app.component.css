@@ -1,3 +1,7 @@
 ul, li {
     display: flex;
 }
+
+h2 {
+    padding: 50px;
+}
