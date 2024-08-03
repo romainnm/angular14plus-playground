@@ -2,20 +2,28 @@ import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { UserComponent } from "./user/user.component";
 import { MOCK_USERS } from '../mocks/users.mock';
+import { UserInfoComponent } from "./user-info/user-info.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent],
+  imports: [HeaderComponent, UserComponent, UserInfoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   users = MOCK_USERS;
+  selectedUserId!: string;
 
-  onSelectUser(userId: string) {
-    console.log(`User id  is ${userId}`);
+  get selectedUserInfo() {
+    return this.users.find(user => user.id === this.selectedUserId);
   }
+
+  onSelectUser(id: string) {
+    this.selectedUserId = id;
+  }
+
+
 }
 
 

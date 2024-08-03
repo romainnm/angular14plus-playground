@@ -55,7 +55,7 @@ export class UserComponent {
     }
  
     onSelectUser() {
-      this.select.emit(this.userId)
+      this.select.emit(this.userId);
     }
 // ================================== ANGULAR < 13 - END ==================================== // 
     
