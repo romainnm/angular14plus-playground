@@ -1,5 +1,6 @@
 import { Component, signal, computed, input, Input, output, Output, EventEmitter, OnInit } from '@angular/core';
 import { MOCK_USERS } from '../../../mocks/users.mock';
+import { IUser } from '../../interfaces/user.interface';
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -45,17 +46,19 @@ export class UserComponent {
 
   
 // 2. Get entire user list with Input/Output
-    @Input({ required: true }) avatar!: string;
-    @Input({ required: true }) userName!: string;
-    @Input({ required: true }) userId!: string;
+    // @Input({ required: true }) avatar!: string;
+    // @Input({ required: true }) userName!: string;
+    // @Input({ required: true }) userId!: string;
+
+    @Input({ required: true }) user!: IUser;
     @Output() select = new EventEmitter<string>();
  
-    get userAvatar() {
-      return 'assets/users/' + this.avatar;
+    get avatarPath() {
+      return 'assets/users/' + this.user.avatar;
     }
  
     onSelectUser() {
-      this.select.emit(this.userId);
+      this.select.emit(this.user.id);
     }
 // ================================== ANGULAR < 13 - END ==================================== // 
     

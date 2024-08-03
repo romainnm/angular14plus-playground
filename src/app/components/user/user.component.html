@@ -39,10 +39,10 @@
 <div>
     <button (click)="onSelectUser()">
         <img 
-            [src]="userAvatar" 
-            [alt]="userName"
+            [src]="avatarPath" 
+            [alt]="user.name"
         />
-        <span>{{ userName }}</span>
+        <span>{{ user.name }}</span>
     </button>
 </div>
 <!--------------- Angular < 13 - end --------------->
