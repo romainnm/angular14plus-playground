@@ -1,5 +1,5 @@
 import { Component, signal, computed, input, Input, output, Output, EventEmitter, OnInit } from '@angular/core';
-import { MOCK_USERS } from '../../mocks/users.mock';
+import { MOCK_USERS } from '../../../mocks/users.mock';
 @Component({
   selector: 'app-user',
   standalone: true,

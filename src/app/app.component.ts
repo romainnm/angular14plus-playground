@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-import { UserComponent } from "./user/user.component";
+import { HeaderComponent } from './components/header/header.component';
+import { UserComponent } from "./components/user/user.component";
 import { MOCK_USERS } from '../mocks/users.mock';
-import { UserInfoComponent } from "./user-info/user-info.component";
+import { UserInfoComponent } from "./components/user-info/user-info.component";
 
 @Component({
   selector: 'app-root',
