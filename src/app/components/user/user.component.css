@@ -1,8 +1,10 @@
 img {
     width: 36px;
     margin: 5px;
+    border-radius: 50%;
 }
 
 button {
     padding: 10px;
+    border-radius: 10px;
 }
