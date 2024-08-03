@@ -1,4 +1,4 @@
-# Notes / Observations
+# Notes / Observations (changes in Angular 14+)
 
 ## Standalone Component
 * Decorator `@Component` has additional flags to enable standalone.
