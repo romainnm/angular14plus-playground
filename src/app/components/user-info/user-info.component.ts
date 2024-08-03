@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { IUser } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-user-info',
@@ -7,7 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './user-info.component.css'
 })
 export class UserInfoComponent {
-  @Input() userInfo: string | undefined;
-  // @Input() userInfo?: string;
+// ================================== ANGULAR 14+ - START ==================================== //
+  userInfo = input.required<string>();
+// ================================== ANGULAR 14+ - END ==================================== //
 
+// ================================== ANGULAR 13- - START ==================================== // 
+  // @Input() userInfo: string | undefined;
+  // @Input() userInfo?: string;
+// ================================== ANGULAR 13- - END ==================================== // 
 }

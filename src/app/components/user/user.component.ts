@@ -11,7 +11,6 @@ import { IUser } from '../../interfaces/user.interface';
 export class UserComponent {
 
 // ================================== ANGULAR 14+ - START ==================================== // 
-// @ts-ignore
 
 // 1. RANDOMIZE USER - Signal syntax
 /*   users = signal(MOCK_USERS[this.getRandomIndex]);
@@ -23,17 +22,19 @@ export class UserComponent {
   // avatar = input.required<string>(); // Read Only
   // userName = input.required<string>(); // Read Only
   // userId = input.required<string>(); // Read Only
-  
-  // userAvatar = computed(() => 'assets/users/' + this.avatar());
-  // select = output<string>();
 
-  // onSelectUser() {
-  //   this.select.emit(this.userId());
-  // }
+  user = input.required<IUser>(); // Read Only
+  
+  avatarPath = computed(() => 'assets/users/' + this.user().avatar);
+  select = output<string>();
+
+  onSelectUser() {
+    this.select.emit(this.user().id);
+  }
 // ================================== ANGULAR 14+ - END ==================================== // 
 
 
-// ================================== ANGULAR < 13 - START ==================================== // 
+// ================================== ANGULAR 13- - START ==================================== // 
 //1. RANDOMIZE USER Property Binding + String Interpolation 
     // users = MOCK_USERS[this.getRandomIndex];
     // get userAvatar() {
@@ -50,17 +51,17 @@ export class UserComponent {
     // @Input({ required: true }) userName!: string;
     // @Input({ required: true }) userId!: string;
 
-    @Input({ required: true }) user!: IUser;
-    @Output() select = new EventEmitter<string>();
+    // @Input({ required: true }) user!: IUser;
+    // @Output() select = new EventEmitter<string>();
  
-    get avatarPath() {
-      return 'assets/users/' + this.user.avatar;
-    }
+    // get avatarPath() {
+    //   return 'assets/users/' + this.user.avatar;
+    // }
  
-    onSelectUser() {
-      this.select.emit(this.user.id);
-    }
-// ================================== ANGULAR < 13 - END ==================================== // 
+    // onSelectUser() {
+    //   this.select.emit(this.user.id);
+    // }
+// ================================== ANGULAR 13- - END ==================================== // 
     
   // private get getRandomIndex() {
   //   return Math.floor(Math.random() * MOCK_USERS.length);

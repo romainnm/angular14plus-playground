@@ -11,15 +11,15 @@
 </div> -->
 
 <!-- User list -->
-<!-- <div>
+<div>
     <button (click)="onSelectUser()">
         <img 
-            [src]="userAvatar()" 
-            [alt]="userName()"
+            [src]="avatarPath()" 
+            [alt]="user().name"
         />
-        <span>{{ userName() }}</span>
+        <span>{{ user().name }}</span>
     </button>
-</div> -->
+</div>
 <!--------------- Angular 14+ / Signal - end --------------->
 
 
@@ -36,7 +36,7 @@
 </div> -->
 
 <!-- User list -->
-<div>
+<!-- <div>
     <button (click)="onSelectUser()">
         <img 
             [src]="avatarPath" 
@@ -44,5 +44,5 @@
         />
         <span>{{ user.name }}</span>
     </button>
-</div>
+</div> -->
 <!--------------- Angular 13- - end --------------->
