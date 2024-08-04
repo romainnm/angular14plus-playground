@@ -1,11 +1,11 @@
 # Angular 14+ Changes - Notes / Observations
 
-## Standalone Component
+## Standalone Component (Angular 14+)
 * Decorator `@Component` has additional flags to enable standalone.
 * Use `@Component` to import `imports: []` required Components, Modules, Directives, etc., instead of `NgModule`.
 * Added extract of `NgModule` in `app.component`.
 
-## Signals (Angular 16) (example: user.component)
+## Signals (Angular 16+) 
 * **Signal vs ZoneJS**: While `Zone.js` change detection needs to go through all components to identify changes and update the view, signals respond precisely to changes in the controller, instantly updating the view.
 * **Signal**: Object that stores a value. Angular is notified when that value changes and manages subscriptions to this signal in all components where it is being used and updates states accordingly.
     * `signal()` => **tracks** a signal 
