@@ -15,6 +15,9 @@
 * Import `input` from core (__make sure it is lowercase!__) - will be read-only!
     * Syntax if no value set: `input.required('')`
     * Note that there is no change in how the parent will pass data to the input.
+* Signal with ngModel usage:
+    * Create property in component and assign an empty signal  `enterName = signal('')`
+    * Use 2-way binding in template `[(ngModel)] = enterName`, ngModel handles the signal which doesn't need to be read with `()` in template.
 
 ## Syntax Changes
 * Alternative syntax (less verbose) for `@Output` (abstraction). Import `output` from core _(unlike `input`, it is not related to `signal`)_. E.g., `@Output() select = new EventEmitter();` becomes `select = output<string>();`. No change required in parent component either way.
