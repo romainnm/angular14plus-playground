@@ -26,6 +26,7 @@
 * `*ngIf` structural directive is not default anymore, needs to be imported in component, `import { NgIf } ...` and add to `imports: [NgIf]`. 
 * `*ngIf` replaced with new syntax (Added in Angular 17) => `@if(condition) { some HTML}` tracking is used by default now. 
 * Additionally, an `@else` can be added as a fallback display, which allows to get rid of the `*ngIf=conditon; else fallback`,  `<ng-template #fallback>` pattern.
+* __Dependency Injection__: `private serviceName = inject(ServiceName)` instead of using the constructor for DI (Added in Angular 14)
 
 ## Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17.
