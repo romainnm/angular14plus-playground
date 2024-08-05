@@ -62,6 +62,7 @@
 * Simplified configuration compared to traditional Angular CLI config.
 
 ## Cheat Sheet
+* Generate a new project with modules: `ng new --no-standalone`
 * Preview schematic: `ng g c <component> --dry-run`
 * `<app-header/>` shorthand if not using content projection.
 * Input typing: `@Input({required: true}) property!: string;`
