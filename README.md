@@ -3,8 +3,34 @@
 ## Standalone Component (Angular 14+)
 * Decorator `@Component` has additional flags to enable standalone.
 * Use `@Component` to import `imports: []` required Components, Modules, Directives, etc., instead of `NgModule`.
-* Added extract of `NgModule` in `app.component`.
+* The application bootstraps diffently:
+    ```
+    // main.ts - Angular 14+ (No need for modules)
+    import { bootstrapApplication } from '@angular/platform-browser';
+    import { AppComponent } from './app/app.component';
+    bootstrapApplication(AppComponent).catch((err) => console.error(err));
+    ```
 
+    ```
+    // main.ts - Angular 13-
+    import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+    import { AppModule } from `./app/app.module`;
+    platformBrowserDynamic().bootstrapModule(AppModule);
+
+    // app.module.ts 
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent } from './app.component';
+    import { HeaderComponent } from './header/header.component';
+
+    @NgModule({
+        declarations: [AppComponent, HeaderComponent],
+        imports: [BrowserModule, etc],
+        providers: [],
+        bootstrap: [AppComponent]
+    })
+    export class AppModule { } 
+    ```
 ## Signals (Angular 16+) 
 * **Signal vs ZoneJS**: While `Zone.js` change detection needs to go through all components to identify changes and update the view, signals respond precisely to changes in the controller, instantly updating the view.
 * **Signal**: Object that stores a value. Angular is notified when that value changes and manages subscriptions to this signal in all components where it is being used and updates states accordingly.
