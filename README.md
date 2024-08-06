@@ -53,7 +53,7 @@
 * `*ngIf` replaced with new syntax (Added in Angular 17) => `@if(condition) { some HTML}` tracking is used by default now. 
 * Additionally, an `@else` can be added as a fallback display, which allows to get rid of the `*ngIf=conditon; else fallback`,  `<ng-template #fallback>` pattern.
 * Alternative __Dependency Injection__ syntax: `private serviceName = inject(ServiceName)` instead of using the constructor for DI (Added in Angular 14)
-* Fetchin Data: __`HttpClientModule`__ is deprecated. Instead use:
+* Fetchin Data: __`HttpClientModule`__ is deprecated (Angular 18). Instead use:
   ```
   providers: [
     . . .
