@@ -53,6 +53,13 @@
 * `*ngIf` replaced with new syntax (Added in Angular 17) => `@if(condition) { some HTML}` tracking is used by default now. 
 * Additionally, an `@else` can be added as a fallback display, which allows to get rid of the `*ngIf=conditon; else fallback`,  `<ng-template #fallback>` pattern.
 * Alternative __Dependency Injection__ syntax: `private serviceName = inject(ServiceName)` instead of using the constructor for DI (Added in Angular 14)
+* Fetchin Data: __`HttpClientModule`__ is deprecated (Angular 18). Instead use:
+  ```
+  providers: [
+    . . .
+    provideHttpClient(withFetch())
+  ]
+  ```
 
 ## Content Projection
 * Angular 18 adds the possibility to have a fallback content when using content projection `<ng-content select="header"> Default header </ng-content>`. The fallback content needs to be between the opening and closing ng-content tags. 
@@ -65,6 +72,7 @@
 * Simplified configuration compared to traditional Angular CLI config.
 
 ## Cheat Sheet
+* Generate a new project with modules: `ng new --no-standalone`
 * Preview schematic: `ng g c <component> --dry-run`
 * `<app-header/>` shorthand if not using content projection.
 * Input typing: `@Input({required: true}) property!: string;`
