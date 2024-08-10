@@ -54,6 +54,9 @@
 * Additionally, an `@else` can be added as a fallback display, which allows to get rid of the `*ngIf=conditon; else fallback`,  `<ng-template #fallback>` pattern.
 * Alternative __Dependency Injection__ syntax: `private serviceName = inject(ServiceName)` instead of using the constructor for DI (Added in Angular 14)
 
+## Content Projection
+* Angular 18 adds the possibility to have a fallback content when using content projection `<ng-content select="header"> Default header </ng-content>`. The fallback content needs to be between the opening and closing ng-content tags. 
+
 ## Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17.
 * Faster development build times (60%+ build improvement).
