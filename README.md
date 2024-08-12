@@ -67,6 +67,9 @@
 
 ## Component LifeCycle
 * Alternative to ngOnDestroy (Angular 16+), `private destroyRef = inject(DestroyRef)`, then call in ngOnInit `this.destroyRef.onDestroy(()=>{ Add function here that will be executed when the Angular component is about to be destroyer})` - (OnDestroy behaves as a listener).
+* New hooks in Angular 16+, register in constructor
+  * `afterRender()` : Triggers whenever something changes in the entire APP
+  * `afterNextRender()` : Triggers only after the next change in the APP
 
 ## Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17.
