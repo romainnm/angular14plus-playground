@@ -64,6 +64,9 @@
 ## Content Projection
 * Angular 18 adds the possibility to have a fallback content when using content projection `<ng-content select="header"> Default header </ng-content>`. The fallback content needs to be between the opening and closing ng-content tags. 
 
+## Component LifeCycle
+* Alternative to ngOnDestroy (Angular 16+), `private destroyRef = inject(DestroyRef)`, then call in ngOnInit `this.destroyRef.onDestroy(()=>{ Add function here that will be executed when the Angular component is about to be destroyer})` - (OnDestroy behaves as a listener).
+
 ## Vite
 * New Esbuilder builder (Vite) with Angular 16 - Default with Angular 17.
 * Faster development build times (60%+ build improvement).
