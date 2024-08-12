@@ -44,6 +44,7 @@
 * Signal with ngModel usage:
     * Create property in component and assign an empty signal  `enterName = signal('')`
     * Use 2-way binding in template `[(ngModel)] = enterName`, ngModel handles the signal which doesn't need to be read with `()` in template.
+* Alternative to @ViewChild, viewChild() (Angular 17+) will return a signal. Use case is same as the decorator version.
 
 ## Syntax Changes
 * Alternative syntax (less verbose) for `@Output` (abstraction). Import `output` from core _(unlike `input`, it is not related to `signal`)_. E.g., `@Output() select = new EventEmitter();` becomes `select = output<string>();`. No change required in parent component either way.
