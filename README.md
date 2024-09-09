@@ -86,3 +86,4 @@
     * Add `!` to tell TypeScript that the value will be set eventually.
     * Configure the `Input` decorator to ensure that an error is caught if we forget to pass a value.
 * Angular 15 doesn't ship with environment file by default. CLI schematic: `ng g environments`.
+* `takeUntilDestroyed` added in Angular 16. No need to unsubscribe in ngOnDestroy
